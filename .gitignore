@@ -1,0 +1,7 @@
+# CMake
+out/
+build/
+
+# IDE
+.vs/
+.idea/

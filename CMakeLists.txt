@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 3.28)
+
+project(
+  garrysmod-sdk
+
+  LANGUAGES
+  "C" "CXX"
+)
+
+# Clear out the C/CXX flags, we'll do a fresh per-target configuration.
+set(CMAKE_CXX_FLAGS "")
+set(CMAKE_C_FLAGS "")
+
+# Setup the GSDK variable.
+set(GSDK "${CMAKE_CURRENT_LIST_DIR}/sdk")
+
+include("cmake/configs/base.cmake")
+include("cmake/configs/lib.cmake")
+include("cmake/configs/dll.cmake")
+include("cmake/platform.cmake")
+
+add_subdirectory("sdk/tier0")
+add_subdirectory("sdk/tier1")
+
+add_subdirectory("examples/plugin")
