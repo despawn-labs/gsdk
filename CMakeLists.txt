@@ -12,12 +12,7 @@ set(CMAKE_CXX_FLAGS "")
 set(CMAKE_C_FLAGS "")
 
 # Setup the GSDK variable.
-set(GSDK "${CMAKE_CURRENT_LIST_DIR}/sdk")
-
-include("cmake/configs/base.cmake")
-include("cmake/configs/lib.cmake")
-include("cmake/configs/dll.cmake")
-include("cmake/platform.cmake")
+include("cmake/gsdk.cmake")
 
 add_subdirectory("sdk/tier0")
 add_subdirectory("sdk/tier1")
