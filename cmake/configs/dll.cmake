@@ -96,7 +96,7 @@ function(gsdk_dll)
         ${T}
 
         PRIVATE
-        "_DEBUG" "DEBUG" "_HAS_ITERATOR_DEBUGGING=0"
+        "_DEBUG" "DEBUG"
       )
 
       target_compile_options(
@@ -104,7 +104,6 @@ function(gsdk_dll)
 
         PRIVATE
         "/Od"
-        "/MTd"
       )
     elseif(RELEASE)
       target_compile_definitions(
@@ -123,7 +122,6 @@ function(gsdk_dll)
         "/Oi"
         "/Ot"
         "/GF"
-        "/MT"
         "/Gy"
       )
     endif()
